@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+  },
+  {
+    path: 'agregar/:listId',
+    loadChildren: () => import('../agregar/agregar.module').then(m => m.AgregarPageModule)
   }
 ];
 
@@ -13,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class Tab2PageRoutingModule {}
+export class Tab2PageRoutingModule { }
